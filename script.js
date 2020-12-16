@@ -1,3 +1,4 @@
+// Variable declaration
 const box1 = document.getElementById("box-1");
 const box2 = document.getElementById("box-2");
 const box3 = document.getElementById("box-3");
@@ -16,7 +17,12 @@ const box15 = document.getElementById("box-15");
 const box16 = document.getElementById("box-16");
 const startButton = document.getElementById("startButton");
 const timeRemainingDisplay = document.getElementById("timeRemainingDisplay");
+const scoreDisplay = document.getElementById("scoreDisplay");
 
+let score = 0;
+let countDownFinished = false;
+
+// Random Mole location
 var moleNumber = 0;
 const moleRandomNum =  () => {
     let min = Math.ceil(1);
@@ -25,6 +31,7 @@ const moleRandomNum =  () => {
     return moleNumber;
 }
 
+// Random Mole Timer
 const randomTimer = () => {
     var min = 0,
       max = 1;
@@ -33,23 +40,59 @@ const randomTimer = () => {
     setTimeout(randomTimer, rand * 1000);
 }
 
+
+// 15 second timer
 let timeLeft = 5;
 
 const countDown = () => {
-    console.log('count down started')
-    console.log(timeLeft)
     let time = setInterval(function(){
-        if(timeLeft <= 0){
+        if(timeLeft < 0){
             clearInterval(time) 
-            // timeLeft = 5;
+            timeLeft = 5;
+            countDownFinished = true;
         }
         timeRemainingDisplay.textContent = `${timeLeft}`;
         timeLeft -= 1;
     }, 1000)
 }
 
-startButton.addEventListener('click', () => {
-    countDown()
+// Whack a mole
+const whackAMole = () => {
+    let check = setInterval(function(){
+        if (countDownFinished == false){
+            console.log("Run Script")
+            
+        }else{
+            console.log("It's Over")
+            countDownFinished = false;
+            clearInterval(check)
+        }
+        
+    }, 100)
     
+}
+
+
+
+// Button click
+startButton.addEventListener('click', () => {
+    score = 0;
+    countDown()
+    whackAMole()
     
 })
+
+
+// const whackAMole = () => {
+//     let check = setInterval(function(){
+//         if (countDownFinished == false){
+//             console.log("Run Script")
+//         }else{
+//             console.log("It's Over")
+//             countDownFinished = false;
+//             clearInterval(check)
+//         }
+        
+//     }, 100)
+    
+// }
