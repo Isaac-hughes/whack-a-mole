@@ -59,10 +59,10 @@ startButton.addEventListener('click', () => {
         }
         let num = moleRandomNum()
         let num2 = picRandomNum()
-        holes[num].style.backgroundImage = `url(../boris${num2}.jpg)`
+        holes[num].style.backgroundImage = `url(../images/boris${num2}.jpg)`
         holes[num].addEventListener('click', scoreCount)
         const removeImg = setTimeout(() => {
-            holes[num].style.backgroundImage = "url(../home.jpg)";
+            holes[num].style.backgroundImage = "url(../images/home.jpg)";
             holes[num].removeEventListener('click', scoreCount)
         }, 750)
     }, 1000)
