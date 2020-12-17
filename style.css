@@ -7,14 +7,16 @@
     flex-direction: row;
 }
 .box{
-    background-color: grey;
+    
     width: 100px;
     height: 100px;
     padding: 0px;
     margin: 5px;
-    border: black;
-    border-width: 2px;
-    border-style: double;
+
     border-radius: 50%;
 
+}
+#box-1, #box-2, #box-3, #box-4, #box-5, #box-6, #box-7, #box-8, #box-9, #box-10, #box-11, #box-12, #box-13, #box-14, #box-15, #box-16 {
+    background-image: url(img/home.jpg);
+    background-size: cover;
 }
