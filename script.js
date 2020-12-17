@@ -50,7 +50,7 @@ const scoreCount = () => {
 // Button click
 startButton.addEventListener('click', () => {
     score = 0;
-    timeRemaining = 5;
+    timeRemaining = 30;
     startButton.remove();
     scoreDisplay.innerHTML = 0;
     const whackAMole = setInterval(() => {
@@ -64,7 +64,7 @@ startButton.addEventListener('click', () => {
         const removeImg = setTimeout(() => {
             holes[num].style.backgroundImage = "url(/img/home.jpg)";
             holes[num].removeEventListener('click', scoreCount)
-        }, 900)
+        }, 750)
     }, 1000)
 
 })
