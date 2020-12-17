@@ -36,7 +36,7 @@ const moleRandomNum =  () => {
 let picNumber = 0;
 const picRandomNum =  () => {
     let min = Math.ceil(1);
-    let max = Math.floor(5);
+    let max = Math.floor(6);
     picNumber = Math.floor(Math.random() * (max - min) + min);
     return picNumber;
 }
