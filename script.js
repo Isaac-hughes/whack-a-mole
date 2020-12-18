@@ -62,9 +62,11 @@ startButton.addEventListener('click', () => {
         holes[num].style.backgroundImage = `url("./images/boris${num2}.jpg")`;
         console.log(holes[num].style.backgroundImage)
         holes[num].addEventListener('click', scoreCount)
+        holes[num].addEventListener('touchstart', scoreCount)
         const removeImg = setTimeout(() => {
             holes[num].style.backgroundImage = 'url("./images/home.jpg")';
             holes[num].removeEventListener('click', scoreCount)
+            holes[num].removeEventListener('touchstart', scoreCount)
         }, 750)
     }, 1000)
 

@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
 }
 h1 {
     font-size: 3rem;
@@ -59,4 +60,57 @@ button{
 #box-1, #box-2, #box-3, #box-4, #box-5, #box-6, #box-7, #box-8, #box-9, #box-10, #box-11, #box-12, #box-13, #box-14, #box-15, #box-16 {
     background-image: url("images/home.jpg");
     background-size: cover;
+}
+
+@media (max-width: 500px){
+    html {
+        overflow: hidden;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        
+    }
+    .game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gameTitle h2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        margin: 0;
+    }
+    .score{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .grid{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+    }
+    .box{
+        
+        width: 80px;
+        height: 80px;
+        padding: 0px;
+        margin: 5px;
+    
+        border-radius: 50%;
+    
+    }
 }
