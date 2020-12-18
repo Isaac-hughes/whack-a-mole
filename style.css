@@ -3,6 +3,7 @@ body {
     height: auto;
     font-family: 'Bungee Outline', cursive;
     background-image: linear-gradient(180deg, rgba(33, 32, 156, 1), rgba(33, 32, 156, 0.7));
+    background-size: cover;
     color: #fdb827;
     display: flex;
     flex-direction: column;
@@ -62,7 +63,7 @@ button{
     background-size: cover;
 }
 
-@media (max-width: 500px){
+@media (max-width: 650px){
     html {
         overflow: hidden;
     }
@@ -104,13 +105,24 @@ button{
         flex-direction: row;
     }
     .box{
-        
         width: 80px;
         height: 80px;
         padding: 0px;
         margin: 5px;
-    
         border-radius: 50%;
-    
+    }
+}
+@media (max-width: 400px){
+    h1 {
+        font-size: 2rem;
+        padding: 5px;
+        margin: 0;
+    }
+    .box{
+        width: 70px;
+        height: 70px;
+        padding: 0px;
+        margin: 5px;
+        border-radius: 50%;
     }
 }
