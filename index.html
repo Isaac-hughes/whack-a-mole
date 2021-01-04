@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Bonk-The-Boris</title>
+    <title>Whack A Mole!</title>
 </head>
 <body>
-    <h1>Bonk-The-Boris</h1>
-    <div class="game">
-        <div id="buttonContainer"><button id="startButton">Start</button></div>
-        <div class="gameTitle">
-        <h2>Time remaining: <div id="timeRemainingDisplay">30</div> seconds!</h2>
+        <div class="top-section">
+            <h1>Whack A Mole!</h1>
+            <div id="buttonContainer"><button id="startButton">Start</button></div>
+            <div class="gameTitle">
+            <h2 class="timeRemaining">Time remaining: <div id="timeRemainingDisplay">30</div> seconds!</h2>
+            </div>
+            <h2 class="score">Score: <div id="scoreDisplay">0</div></h2>
         </div>
-        <h2 class="score">Score: <div id="scoreDisplay">0</div></h2>
+
         <div class="grid">
             <div class="row">
                 <div id="box-1" class="box"></div>
@@ -42,7 +44,6 @@
                 <div id="box-16" class="box"></div>
             </div>
         </div>
-    </div>
     <script src="script.js"></script>
     <script src="timer.js"></script>
 </body>
